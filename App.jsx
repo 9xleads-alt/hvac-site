@@ -1,184 +1,127 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+export default function App() {
+  return (
+    <div
+      style={{
+        fontFamily: "Arial, sans-serif",
+        padding: "20px",
+        maxWidth: "700px",
+        margin: "0 auto",
+        lineHeight: "1.5",
+      }}
+    >
+      <h1>DFW HVAC Quote</h1>
+      <p>
+        Serving homeowners across DFW with fast, professional HVAC replacement quotes.
+      </p>
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
+      <h3>Contact</h3>
+      <p>
+        Phone: <a href="tel:6822074486">682-207-4486</a>
+      </p>
+      <p>
+        Email: <a href="mailto:9xleads@gmail.com">9xleads@gmail.com</a>
+      </p>
+      <p>Serving approved DFW ZIP codes</p>
 
-.hero {
-  position: relative;
+      <hr style={{ margin: "20px 0" }} />
 
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
+      <h2>Request Your Free HVAC Quote</h2>
+      <p>No pressure. Just straightforward pricing and options.</p>
 
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
+      <form
+        action="https://formspree.io/f/mwvwvzzv"
+        method="POST"
+        style={{ marginTop: "20px" }}
+      >
+        <input type="hidden" name="_subject" value="New HVAC Lead Submission" />
 
-  .framework,
-  .vite {
-    position: absolute;
-  }
+        <div style={{ marginBottom: "12px" }}>
+          <label htmlFor="name">Full Name</label>
+          <br />
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            style={{ width: "100%", padding: "10px", boxSizing: "border-box" }}
+          />
+        </div>
 
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
+        <div style={{ marginBottom: "12px" }}>
+          <label htmlFor="address">Address</label>
+          <br />
+          <input
+            id="address"
+            name="address"
+            type="text"
+            required
+            style={{ width: "100%", padding: "10px", boxSizing: "border-box" }}
+          />
+        </div>
 
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
+        <div style={{ marginBottom: "12px" }}>
+          <label htmlFor="phone">Phone</label>
+          <br />
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            style={{ width: "100%", padding: "10px", boxSizing: "border-box" }}
+          />
+        </div>
 
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
+        <div style={{ marginBottom: "12px" }}>
+          <label htmlFor="email">Email</label>
+          <br />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            style={{ width: "100%", padding: "10px", boxSizing: "border-box" }}
+          />
+        </div>
 
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
+        <div style={{ marginBottom: "12px" }}>
+          <label htmlFor="zip">ZIP Code</label>
+          <br />
+          <input
+            id="zip"
+            name="zip"
+            type="text"
+            required
+            style={{ width: "100%", padding: "10px", boxSizing: "border-box" }}
+          />
+        </div>
 
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
+        <div style={{ marginBottom: "12px" }}>
+          <label htmlFor="message">What issues are you having?</label>
+          <br />
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            style={{ width: "100%", padding: "10px", boxSizing: "border-box" }}
+          />
+        </div>
 
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+        <button
+          type="submit"
+          style={{
+            padding: "12px",
+            width: "100%",
+            backgroundColor: "#c62828",
+            color: "white",
+            fontWeight: "bold",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          Submit My Information
+        </button>
+      </form>
+    </div>
+  );
 }
