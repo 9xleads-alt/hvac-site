@@ -3,364 +3,185 @@ export default function App() {
     <div
       style={{
         fontFamily: "Arial, sans-serif",
-        backgroundColor: "#f4f7fb",
-        color: "#111827",
+        backgroundColor: "#eef3f9",
+        color: "#0f172a",
         margin: 0,
         padding: 0,
-        lineHeight: "1.5",
+        lineHeight: "1.4",
       }}
     >
       <section
         style={{
-          background: "linear-gradient(135deg, #0f172a, #1d4ed8)",
-          color: "white",
-          padding: "56px 20px 70px",
+          background: "linear-gradient(180deg, #081225 0%, #123a9b 100%)",
+          padding: "16px 14px 28px",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1150px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1.2fr 0.8fr",
-            gap: "30px",
-            alignItems: "center",
-          }}
-        >
-          <div>
+        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "14px",
+            }}
+          >
             <div
               style={{
-                display: "inline-block",
-                backgroundColor: "#dc2626",
+                backgroundColor: "#ef4444",
+                color: "white",
                 padding: "8px 14px",
                 borderRadius: "999px",
                 fontWeight: "bold",
-                fontSize: "14px",
-                marginBottom: "18px",
+                fontSize: "13px",
+                letterSpacing: "0.2px",
               }}
             >
               DFW HVAC Quote
             </div>
+          </div>
 
-            <h1
-              style={{
-                fontSize: "48px",
-                lineHeight: "1.08",
-                margin: "0 0 16px 0",
-                maxWidth: "760px",
-              }}
-            >
-              Need a New AC System in DFW?
-              <br />
-              Get a Fast Quote Today.
-            </h1>
+          <h1
+            style={{
+              color: "white",
+              fontSize: "36px",
+              lineHeight: "1.05",
+              margin: "0 0 10px 0",
+              textAlign: "center",
+              fontWeight: "800",
+            }}
+          >
+            Need a New AC System?
+            <br />
+            Get a Fast DFW Quote.
+          </h1>
 
-            <p
-              style={{
-                fontSize: "20px",
-                color: "#dbeafe",
-                maxWidth: "720px",
-                marginBottom: "24px",
-              }}
-            >
-              Compare your options fast. No pressure. Just straightforward pricing
-              for AC replacement and HVAC system quotes in the DFW area.
-            </p>
+          <p
+            style={{
+              color: "#dbeafe",
+              fontSize: "18px",
+              textAlign: "center",
+              margin: "0 0 14px 0",
+            }}
+          >
+            New AC and HVAC replacement quotes for DFW homeowners. No pressure.
+            Fast response.
+          </p>
 
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: "8px",
+              marginBottom: "16px",
+            }}
+          >
+            {[
+              "Replacement quotes only",
+              "Same-day response",
+              "Serving DFW homeowners",
+            ].map((item) => (
+              <div
+                key={item}
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.12)",
+                  color: "white",
+                  padding: "8px 12px",
+                  borderRadius: "999px",
+                  fontSize: "13px",
+                  fontWeight: "bold",
+                }}
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <div
+            style={{
+              backgroundColor: "white",
+              borderRadius: "18px",
+              padding: "20px",
+              boxShadow: "0 18px 40px rgba(0,0,0,0.22)",
+              border: "1px solid #dbeafe",
+            }}
+          >
             <div
               style={{
                 display: "flex",
-                flexWrap: "wrap",
-                gap: "12px",
-                marginBottom: "26px",
+                justifyContent: "center",
+                marginBottom: "10px",
               }}
             >
               <div
                 style={{
-                  backgroundColor: "rgba(255,255,255,0.12)",
-                  padding: "10px 14px",
-                  borderRadius: "10px",
-                }}
-              >
-                Same-day quote requests
-              </div>
-              <div
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.12)",
-                  padding: "10px 14px",
-                  borderRadius: "10px",
-                }}
-              >
-                Residential systems only
-              </div>
-              <div
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.12)",
-                  padding: "10px 14px",
-                  borderRadius: "10px",
-                }}
-              >
-                Serving approved DFW ZIP codes
-              </div>
-            </div>
-
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
-              <a
-                href="tel:6822074486"
-                style={{
-                  backgroundColor: "#dc2626",
+                  backgroundColor: "#ef4444",
                   color: "white",
-                  textDecoration: "none",
-                  padding: "15px 22px",
-                  borderRadius: "10px",
+                  padding: "7px 12px",
+                  borderRadius: "999px",
                   fontWeight: "bold",
-                  display: "inline-block",
+                  fontSize: "12px",
                 }}
               >
-                Call 682-207-4486
-              </a>
-
-              <a
-                href="#quote-form"
-                style={{
-                  backgroundColor: "white",
-                  color: "#111827",
-                  textDecoration: "none",
-                  padding: "15px 22px",
-                  borderRadius: "10px",
-                  fontWeight: "bold",
-                  display: "inline-block",
-                }}
-              >
-                Get My Free Quote
-              </a>
-            </div>
-          </div>
-
-          <div
-            style={{
-              backgroundColor: "white",
-              color: "#111827",
-              borderRadius: "16px",
-              padding: "26px",
-              boxShadow: "0 16px 40px rgba(0,0,0,0.18)",
-            }}
-          >
-            <h2 style={{ marginTop: 0, marginBottom: "12px", fontSize: "28px" }}>
-              Why Homeowners Submit Here
-            </h2>
-
-            <div style={{ marginBottom: "16px" }}>
-              <div style={{ fontWeight: "bold", marginBottom: "6px" }}>
-                Fast Quote Process
-              </div>
-              <div style={{ color: "#4b5563" }}>
-                Submit your info and get a fast response on your replacement
-                options.
+                Free Quote Request
               </div>
             </div>
 
-            <div style={{ marginBottom: "16px" }}>
-              <div style={{ fontWeight: "bold", marginBottom: "6px" }}>
-                No Pressure
-              </div>
-              <div style={{ color: "#4b5563" }}>
-                Straightforward conversation about pricing and options.
-              </div>
-            </div>
-
-            <div style={{ marginBottom: "16px" }}>
-              <div style={{ fontWeight: "bold", marginBottom: "6px" }}>
-                Built for DFW Homeowners
-              </div>
-              <div style={{ color: "#4b5563" }}>
-                Focused on local residential HVAC replacement requests.
-              </div>
-            </div>
-
-            <div
+            <h2
               style={{
-                backgroundColor: "#eff6ff",
-                border: "1px solid #bfdbfe",
-                padding: "14px",
-                borderRadius: "10px",
-                marginTop: "14px",
-                fontSize: "15px",
+                textAlign: "center",
+                fontSize: "34px",
+                margin: "0 0 6px 0",
+                fontWeight: "800",
               }}
             >
-              Need faster help? Call now:
-              <br />
-              <a
-                href="tel:6822074486"
-                style={{
-                  color: "#1d4ed8",
-                  fontWeight: "bold",
-                  textDecoration: "none",
-                }}
-              >
-                682-207-4486
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ maxWidth: "1150px", margin: "0 auto", padding: "0 20px" }}>
-        <div
-          style={{
-            backgroundColor: "white",
-            borderRadius: "16px",
-            padding: "28px",
-            boxShadow: "0 10px 28px rgba(0,0,0,0.08)",
-            marginTop: "-34px",
-            position: "relative",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr 1fr",
-              gap: "18px",
-              textAlign: "center",
-            }}
-          >
-            <div>
-              <div style={{ fontSize: "28px", fontWeight: "bold", color: "#1d4ed8" }}>
-                Fast
-              </div>
-              <div style={{ color: "#4b5563" }}>Quick quote request process</div>
-            </div>
-            <div>
-              <div style={{ fontSize: "28px", fontWeight: "bold", color: "#1d4ed8" }}>
-                Clear
-              </div>
-              <div style={{ color: "#4b5563" }}>Straightforward pricing conversation</div>
-            </div>
-            <div>
-              <div style={{ fontSize: "28px", fontWeight: "bold", color: "#1d4ed8" }}>
-                Local
-              </div>
-              <div style={{ color: "#4b5563" }}>Focused on DFW homeowners</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ maxWidth: "1150px", margin: "0 auto", padding: "36px 20px 60px" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "30px",
-            alignItems: "start",
-          }}
-        >
-          <div>
-            <h2 style={{ fontSize: "36px", marginBottom: "16px" }}>
-              Get Your Free HVAC Quote
+              Start Your Quote
             </h2>
 
-            <p style={{ fontSize: "18px", color: "#4b5563", marginBottom: "20px" }}>
-              Fill this out and we’ll review your request and reach out with the
-              next step. The more detail you give, the faster the quote process goes.
+            <p
+              style={{
+                textAlign: "center",
+                color: "#475569",
+                fontSize: "15px",
+                margin: "0 0 14px 0",
+              }}
+            >
+              Fill this out and we’ll reach back out fast.
             </p>
 
             <div
               style={{
-                backgroundColor: "white",
-                borderRadius: "14px",
-                padding: "22px",
-                boxShadow: "0 10px 24px rgba(0,0,0,0.06)",
-                marginBottom: "18px",
-              }}
-            >
-              <div style={{ fontWeight: "bold", marginBottom: "10px" }}>
-                Best fit for:
-              </div>
-              <ul style={{ paddingLeft: "20px", marginTop: 0, color: "#374151" }}>
-                <li>Old AC systems</li>
-                <li>High repair costs</li>
-                <li>Poor cooling or airflow</li>
-                <li>Replacement pricing requests</li>
-              </ul>
-            </div>
-
-            <div
-              style={{
-                backgroundColor: "#fef2f2",
-                border: "1px solid #fecaca",
+                backgroundColor: "#fff1f2",
+                border: "1px solid #fecdd3",
+                color: "#be123c",
                 borderRadius: "12px",
-                padding: "16px",
-                color: "#7f1d1d",
+                padding: "12px",
+                textAlign: "center",
                 fontWeight: "bold",
-                marginBottom: "18px",
-              }}
-            >
-              Need help now? Call 682-207-4486
-            </div>
-
-            <div
-              style={{
-                backgroundColor: "white",
-                borderRadius: "14px",
-                padding: "22px",
-                boxShadow: "0 10px 24px rgba(0,0,0,0.06)",
-              }}
-            >
-              <h3 style={{ marginTop: 0, marginBottom: "10px" }}>Why people act here</h3>
-              <div style={{ color: "#4b5563" }}>
-                Homeowners searching for AC help want fast answers, simple pricing,
-                and someone who will actually call them back. That’s what this page
-                is built for.
-              </div>
-            </div>
-          </div>
-
-          <div
-            id="quote-form"
-            style={{
-              backgroundColor: "white",
-              borderRadius: "16px",
-              padding: "28px",
-              boxShadow: "0 14px 30px rgba(0,0,0,0.10)",
-              border: "2px solid #dbeafe",
-            }}
-          >
-            <div
-              style={{
-                display: "inline-block",
-                backgroundColor: "#dc2626",
-                color: "white",
-                padding: "6px 12px",
-                borderRadius: "999px",
-                fontSize: "13px",
-                fontWeight: "bold",
+                fontSize: "14px",
                 marginBottom: "14px",
               }}
             >
-              Free Quote Request
+              Limited availability today — request your quote now
             </div>
-
-            <h3 style={{ fontSize: "30px", margin: "0 0 10px 0" }}>
-              Start Your Quote
-            </h3>
-
-            <p style={{ color: "#4b5563", marginTop: 0, marginBottom: "20px" }}>
-              Submit your information below and we’ll review your request.
-            </p>
 
             <form
               action="https://formspree.io/f/mwvwvzzv"
               method="POST"
-              style={{ marginTop: "10px" }}
             >
               <input type="hidden" name="_subject" value="New HVAC Lead Submission" />
 
-              <div style={{ marginBottom: "12px" }}>
-                <label htmlFor="name" style={{ fontWeight: "bold" }}>
+              <div style={{ marginBottom: "10px" }}>
+                <label
+                  htmlFor="name"
+                  style={{
+                    display: "block",
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    marginBottom: "5px",
+                  }}
+                >
                   Full Name
                 </label>
-                <br />
                 <input
                   id="name"
                   name="name"
@@ -368,41 +189,28 @@ export default function App() {
                   required
                   style={{
                     width: "100%",
-                    padding: "12px",
+                    padding: "13px 14px",
                     boxSizing: "border-box",
-                    borderRadius: "10px",
+                    borderRadius: "12px",
                     border: "1px solid #cbd5e1",
-                    marginTop: "6px",
+                    fontSize: "16px",
+                    outline: "none",
                   }}
                 />
               </div>
 
-              <div style={{ marginBottom: "12px" }}>
-                <label htmlFor="address" style={{ fontWeight: "bold" }}>
-                  Address
-                </label>
-                <br />
-                <input
-                  id="address"
-                  name="address"
-                  type="text"
-                  required
+              <div style={{ marginBottom: "10px" }}>
+                <label
+                  htmlFor="phone"
                   style={{
-                    width: "100%",
-                    padding: "12px",
-                    boxSizing: "border-box",
-                    borderRadius: "10px",
-                    border: "1px solid #cbd5e1",
-                    marginTop: "6px",
+                    display: "block",
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    marginBottom: "5px",
                   }}
-                />
-              </div>
-
-              <div style={{ marginBottom: "12px" }}>
-                <label htmlFor="phone" style={{ fontWeight: "bold" }}>
+                >
                   Phone
                 </label>
-                <br />
                 <input
                   id="phone"
                   name="phone"
@@ -410,20 +218,28 @@ export default function App() {
                   required
                   style={{
                     width: "100%",
-                    padding: "12px",
+                    padding: "13px 14px",
                     boxSizing: "border-box",
-                    borderRadius: "10px",
+                    borderRadius: "12px",
                     border: "1px solid #cbd5e1",
-                    marginTop: "6px",
+                    fontSize: "16px",
+                    outline: "none",
                   }}
                 />
               </div>
 
-              <div style={{ marginBottom: "12px" }}>
-                <label htmlFor="email" style={{ fontWeight: "bold" }}>
+              <div style={{ marginBottom: "10px" }}>
+                <label
+                  htmlFor="email"
+                  style={{
+                    display: "block",
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    marginBottom: "5px",
+                  }}
+                >
                   Email
                 </label>
-                <br />
                 <input
                   id="email"
                   name="email"
@@ -431,20 +247,28 @@ export default function App() {
                   required
                   style={{
                     width: "100%",
-                    padding: "12px",
+                    padding: "13px 14px",
                     boxSizing: "border-box",
-                    borderRadius: "10px",
+                    borderRadius: "12px",
                     border: "1px solid #cbd5e1",
-                    marginTop: "6px",
+                    fontSize: "16px",
+                    outline: "none",
                   }}
                 />
               </div>
 
-              <div style={{ marginBottom: "12px" }}>
-                <label htmlFor="zip" style={{ fontWeight: "bold" }}>
+              <div style={{ marginBottom: "10px" }}>
+                <label
+                  htmlFor="zip"
+                  style={{
+                    display: "block",
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    marginBottom: "5px",
+                  }}
+                >
                   ZIP Code
                 </label>
-                <br />
                 <input
                   id="zip"
                   name="zip"
@@ -452,32 +276,43 @@ export default function App() {
                   required
                   style={{
                     width: "100%",
-                    padding: "12px",
+                    padding: "13px 14px",
                     boxSizing: "border-box",
-                    borderRadius: "10px",
+                    borderRadius: "12px",
                     border: "1px solid #cbd5e1",
-                    marginTop: "6px",
+                    fontSize: "16px",
+                    outline: "none",
                   }}
                 />
               </div>
 
-              <div style={{ marginBottom: "16px" }}>
-                <label htmlFor="message" style={{ fontWeight: "bold" }}>
-                  What issues are you having?
+              <div style={{ marginBottom: "10px" }}>
+                <label
+                  htmlFor="message"
+                  style={{
+                    display: "block",
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    marginBottom: "5px",
+                  }}
+                >
+                  What do you need help with?
                 </label>
-                <br />
                 <textarea
                   id="message"
                   name="message"
-                  rows="5"
+                  rows="4"
                   required
+                  placeholder="Old system, high repair cost, poor cooling, looking for replacement quote, etc."
                   style={{
                     width: "100%",
-                    padding: "12px",
+                    padding: "13px 14px",
                     boxSizing: "border-box",
-                    borderRadius: "10px",
+                    borderRadius: "12px",
                     border: "1px solid #cbd5e1",
-                    marginTop: "6px",
+                    fontSize: "16px",
+                    outline: "none",
+                    resize: "vertical",
                   }}
                 />
               </div>
@@ -486,72 +321,185 @@ export default function App() {
                 type="submit"
                 style={{
                   width: "100%",
-                  backgroundColor: "#dc2626",
+                  background: "linear-gradient(180deg, #ef4444 0%, #dc2626 100%)",
                   color: "white",
                   border: "none",
-                  padding: "15px",
-                  borderRadius: "10px",
+                  padding: "16px",
+                  borderRadius: "12px",
                   fontWeight: "bold",
-                  fontSize: "16px",
+                  fontSize: "18px",
                   cursor: "pointer",
+                  boxShadow: "0 10px 22px rgba(220,38,38,0.25)",
+                  marginTop: "6px",
                 }}
               >
                 Get My Free Quote
               </button>
 
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "12px",
+                  fontSize: "14px",
+                  color: "#334155",
+                  fontWeight: "bold",
+                }}
+              >
+                Or call now{" "}
+                <a
+                  href="tel:6822074486"
+                  style={{
+                    color: "#1d4ed8",
+                    textDecoration: "none",
+                  }}
+                >
+                  682-207-4486
+                </a>
+              </div>
+
               <p
                 style={{
-                  fontSize: "12px",
-                  color: "#6b7280",
-                  marginTop: "12px",
+                  fontSize: "11px",
+                  color: "#64748b",
+                  marginTop: "10px",
                   marginBottom: 0,
+                  textAlign: "center",
                 }}
               >
                 By submitting this form, you agree to be contacted regarding your
-                HVAC quote request.
+                quote request.
               </p>
             </form>
           </div>
         </div>
       </section>
 
+      <section style={{ maxWidth: "760px", margin: "0 auto", padding: "16px 14px 10px" }}>
+        <div
+          style={{
+            display: "grid",
+            gap: "12px",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "white",
+              borderRadius: "16px",
+              padding: "18px",
+              boxShadow: "0 10px 22px rgba(15,23,42,0.06)",
+              border: "1px solid #e2e8f0",
+            }}
+          >
+            <h3
+              style={{
+                marginTop: 0,
+                marginBottom: "8px",
+                fontSize: "22px",
+                textAlign: "center",
+              }}
+            >
+              Why homeowners submit here
+            </h3>
+            <div
+              style={{
+                color: "#475569",
+                fontSize: "15px",
+                textAlign: "center",
+              }}
+            >
+              Fast quote process, local DFW focus, and straightforward conversation
+              about replacement options.
+            </div>
+          </div>
+
+          <div
+            style={{
+              backgroundColor: "white",
+              borderRadius: "16px",
+              padding: "18px",
+              boxShadow: "0 10px 22px rgba(15,23,42,0.06)",
+              border: "1px solid #e2e8f0",
+            }}
+          >
+            <h3
+              style={{
+                marginTop: 0,
+                marginBottom: "10px",
+                fontSize: "22px",
+                textAlign: "center",
+              }}
+            >
+              Best fit for
+            </h3>
+
+            <div
+              style={{
+                display: "grid",
+                gap: "8px",
+              }}
+            >
+              {[
+                "Old AC systems",
+                "High repair costs",
+                "Poor cooling or airflow",
+                "Replacement pricing requests",
+              ].map((item) => (
+                <div
+                  key={item}
+                  style={{
+                    backgroundColor: "#f8fafc",
+                    border: "1px solid #e2e8f0",
+                    borderRadius: "10px",
+                    padding: "10px 12px",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    color: "#334155",
+                    fontSize: "15px",
+                  }}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section
         style={{
-          backgroundColor: "#111827",
-          color: "white",
-          padding: "40px 20px",
+          padding: "18px 14px 30px",
         }}
       >
         <div
           style={{
-            maxWidth: "1150px",
+            maxWidth: "760px",
             margin: "0 auto",
-            display: "flex",
-            justifyContent: "space-between",
-            gap: "20px",
-            alignItems: "center",
-            flexWrap: "wrap",
+            backgroundColor: "#081225",
+            color: "white",
+            borderRadius: "18px",
+            padding: "22px 18px",
+            textAlign: "center",
+            boxShadow: "0 14px 30px rgba(8,18,37,0.18)",
           }}
         >
-          <div>
-            <h3 style={{ margin: "0 0 8px 0", fontSize: "28px" }}>
-              Ready to Talk About Your Options?
-            </h3>
-            <div style={{ color: "#d1d5db" }}>
-              Call now or submit your information for a fast quote.
-            </div>
+          <h3 style={{ margin: "0 0 8px 0", fontSize: "28px" }}>
+            Ready to talk about your options?
+          </h3>
+          <div style={{ color: "#d1d5db", marginBottom: "14px", fontSize: "15px" }}>
+            Call now or submit your information for a fast quote.
           </div>
 
           <a
             href="tel:6822074486"
             style={{
-              backgroundColor: "#dc2626",
+              background: "linear-gradient(180deg, #ef4444 0%, #dc2626 100%)",
               color: "white",
               textDecoration: "none",
               padding: "14px 22px",
-              borderRadius: "10px",
+              borderRadius: "12px",
               fontWeight: "bold",
               display: "inline-block",
+              boxShadow: "0 10px 22px rgba(220,38,38,0.25)",
             }}
           >
             Call 682-207-4486
