@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 
 const phoneNumber = "6822074486";
 const displayPhone = "682-207-4486";
-const formspreeUrl = "https://formspree.io/f/mwvwvzzv";
+const web3formsKey = "f5d1719a-557b-4fc9-a6a8-ad48a8f3eb8a";
 
 function money(n) {
   return `$${n.toLocaleString()}`;
@@ -418,11 +418,20 @@ export default function App() {
         </div>
 
         <form
-          action={formspreeUrl}
+          action="https://api.web3forms.com/submit"
           method="POST"
-          target="_blank"
           style={sectionCard}
         >
+          <input type="hidden" name="access_key" value={web3formsKey} />
+          <input type="hidden" name="subject" value="New HVAC Lead Submission" />
+          <input type="hidden" name="from_name" value="DFW HVAC Quote" />
+          <input type="hidden" name="botcheck" value="" />
+          <input type="hidden" name="systemType" value={systemType} />
+          <input type="hidden" name="homeSize" value={homeSize} />
+          <input type="hidden" name="systemAge" value={systemAge} />
+          <input type="hidden" name="financing" value={financing} />
+          <input type="hidden" name="ballparkEstimate" value={estimate} />
+
           <h3
             style={{
               marginTop: 0,
@@ -433,13 +442,6 @@ export default function App() {
           >
             Send My Info Now
           </h3>
-
-          <input type="hidden" name="_subject" value="New HVAC Lead Submission" />
-          <input type="hidden" name="systemType" value={systemType} />
-          <input type="hidden" name="homeSize" value={homeSize} />
-          <input type="hidden" name="systemAge" value={systemAge} />
-          <input type="hidden" name="financing" value={financing} />
-          <input type="hidden" name="ballparkEstimate" value={estimate} />
 
           <div style={{ marginBottom: "10px" }}>
             <label
